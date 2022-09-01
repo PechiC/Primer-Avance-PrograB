@@ -1,0 +1,76 @@
+#include <iostream>
+#include <string>       //Para poder agregar caracteres y ulizar en ellos espacios en blanco dentro de mis declaraciones.
+
+using namespace std;
+
+int main()
+{
+    int Nuart, op;
+    float Pjuegob, Pjuegof;
+    string Noart, Dart, Categoria;
+
+    cout << "\t *-*-*-*-*-Bisonte GameStore-*-*-*-*-* \n\n";
+    cout << " Que accion desea realizar? \n\n";
+    cout << " 1.-Agregar un Articulo\n 2.-Modificar un Articulo\n 3.-Eliminar un Articulo\n 4.-Ver mi Lista\n 5.-Limpiar la Pantalla\n 6.-Salir\n\n"; //De momento no todas las opciones cumplen con su funcion sorry ;:c
+   
+    cin >> op;
+
+    switch(op)
+    {
+    case 1:
+        cout << "Ingrese el numero de articulo \n\n";  //no agrege un cin,ignore ya que es unicamente un valor numerico
+        cin >> Nuart;
+
+        cout << "ingrese el nombre del Videojuego \n\n";
+        cin.ignore();//lo agrege para ignorar el primer espacio que se ingrese
+        getline(cin, Noart); //permite ejecutar los espacios en la variable
+
+        cout << "ingrese la descripcion del articulo\n\n";
+        cin.ignore();
+        getline(cin, Dart);
+
+        cout << "De que categoria es el Videojuego\n\n";
+        cin.ignore();
+        getline(cin,Categoria);
+
+        cout << "ingrese el precio base del articulo \n\n";
+        cin >> Pjuegob;
+
+        return main();
+        break;
+
+        //☢ ☢ ☢   Seccion en Progreso :D   ☢ ☢ ☢ ⌛
+
+    case 2: //   Nada,    Opcion para modificar un articulo de la lista.
+        break;
+
+    case 3://    No hay,  Opcion para Eliminar un articulo de la lista.
+        break;
+
+    case 4: //No existe (de momento) :D   Opcion para Ver la lista de Articulos.
+        break;
+
+
+        //☢ ☢ ☢   Fin de la Seccion en Progreso, Gracias por su compresión....   ☢ ☢ ☢ ⌛
+
+
+    case 5: //Opcion para limpiar la pantalla
+        system("cls"); //   (system("cls")) es la funcion que utilizamos para limpíar la pantalla 
+        return main();
+        break;
+
+    case 6: //La opcion para salir del programa
+        cout <<" Ah bueno bye 👍 \n\n";
+        break;
+
+    default:
+        cout << " Really? solo tenias 6 opciones te regresare al inicio y que no se repita oki? 🤙...   \n\n";  
+
+        system("pause");   //Utilize el system("pause") para que se pueda leer el mensaje de una opcion por default antes de limpiar la pantalla.
+        system("cls");     
+        return main();
+
+    }
+
+
+}
