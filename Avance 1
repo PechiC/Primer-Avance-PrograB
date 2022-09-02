@@ -5,9 +5,9 @@ using namespace std;
 
 int main()
 {
-    int Nuart, op;
-    float Pjuegob, Pjuegof;
-    string Noart, Dart, Categoria;
+    int Nuart,Año, op;
+    float Pjuegob,imp, Pjuegof;
+    string Noart,Carc,Clas, Dart,Genro ;
 
     cout << "\t *-*-*-*-*-Bisonte GameStore-*-*-*-*-* \n\n";
     cout << " Que accion desea realizar? \n\n";
@@ -24,17 +24,31 @@ int main()
         cout << "ingrese el nombre del Videojuego \n\n";
         cin.ignore();//lo agrege para ignorar el primer espacio que se ingrese
         getline(cin, Noart); //permite ejecutar los espacios en la variable
+        
+        cout << "ingrese el Año de lanzamiento \n\n";
+        cin >> Año;
+        
+        cout << "Cual es la Clasificacion del Videojuego?\n\n";
+        cin.ignore();
+        getline(cin, Clas); 
+        
+        cout << "Ingrese las Caracterisricas del Videojuego\n\n";
+        cin.ignore();
+        getline(cin, Carc); 
 
         cout << "ingrese la descripcion del articulo\n\n";
         cin.ignore();
         getline(cin, Dart);
 
-        cout << "De que categoria es el Videojuego\n\n";
+        cout << "Cual es el Genero del Videojuego\n\n";
         cin.ignore();
-        getline(cin,Categoria);
+        getline(cin,Genro);
 
         cout << "ingrese el precio base del articulo \n\n";
         cin >> Pjuegob;
+        
+        cout << "Cual es el Impuesto a aplicar en este articulo?  \n\n";
+        cin >> imp;
 
         return main();
         break;
